@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net" modified="2025-12-05T23:00:00.000Z" agent="5.0" version="21.0.0" etag="drawio" type="device">
+  <diagram name="Business Process" id="business-process">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Swimlane 1: Field Agent -->
+        <mxCell id="swimlane1" value="Field Agent" style="swimlane;whiteSpace=wrap;html=1;startSize=40;horizontal=0;swimlaneLine=1;swimlineWidth=2;swimlaneFillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="start1" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="swimlane1">
+          <mxGeometry x="40" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="activity1" value="Record Meter Reading&#xa;(Previous &amp; Current)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane1">
+          <mxGeometry x="180" y="70" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="end1" value="End" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="swimlane1">
+          <mxGeometry x="440" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="swimlane1" source="start1" target="activity1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="swimlane1" source="activity1" target="end1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Swimlane 2: System (Automated) -->
+        <mxCell id="swimlane2" value="System (Automated)" style="swimlane;whiteSpace=wrap;html=1;startSize=40;horizontal=0;swimlaneLine=1;swimlineWidth=2;swimlaneFillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="1080" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="activity2" value="Receive Reading" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane2">
+          <mxGeometry x="40" y="60" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="activity3" value="Calculate Usage&#xa;(Current - Previous)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane2">
+          <mxGeometry x="240" y="60" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="activity4" value="Generate Bill&#xa;(5-Tier Tariff)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane2">
+          <mxGeometry x="470" y="60" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="activity5" value="Update Bill Status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane2">
+          <mxGeometry x="700" y="60" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="swimlane2" source="activity2" target="activity3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="swimlane2" source="activity3" target="activity4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow5" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="swimlane2" source="activity4" target="activity5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Swimlane 3: Billing Department -->
+        <mxCell id="swimlane3" value="Billing Department" style="swimlane;whiteSpace=wrap;html=1;startSize=40;horizontal=0;swimlaneLine=1;swimlineWidth=2;swimlaneFillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="1080" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="activity6" value="Receive Payment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane3">
+          <mxGeometry x="40" y="60" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="activity7" value="Process Payment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane3">
+          <mxGeometry x="240" y="60" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="activity8" value="Update Bill Status&#xa;(PAID/PARTIAL/OVERDUE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane3">
+          <mxGeometry x="440" y="60" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow6" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="swimlane3" source="activity6" target="activity7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="swimlane3" source="activity7" target="activity8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Swimlane 4: Management -->
+        <mxCell id="swimlane4" value="Management" style="swimlane;whiteSpace=wrap;html=1;startSize=40;horizontal=0;swimlaneLine=1;swimlineWidth=2;swimlaneFillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="40" y="620" width="1080" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="activity9" value="View Reports" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane4">
+          <mxGeometry x="40" y="60" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="activity10" value="Analyze Data&#xa;(Usage, Payments, Revenue)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane4">
+          <mxGeometry x="240" y="60" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="activity11" value="Make Decisions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="swimlane4">
+          <mxGeometry x="510" y="60" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow8" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="swimlane4" source="activity9" target="activity10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow9" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="swimlane4" source="activity10" target="activity11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Data Flow Arrows Between Swimlanes -->
+        <mxCell id="dataflow1" value="Meter Reading Data" style="endArrow=classic;html=1;rounded=0;dashed=1;dashPattern=8 8;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="130" as="sourcePoint" />
+            <mxPoint x="115" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dataflow2" value="Bill Generated" style="endArrow=classic;html=1;rounded=0;dashed=1;dashPattern=8 8;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="280" as="sourcePoint" />
+            <mxPoint x="115" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dataflow3" value="Payment Data" style="endArrow=classic;html=1;rounded=0;dashed=1;dashPattern=8 8;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="500" as="sourcePoint" />
+            <mxPoint x="560" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dataflow4" value="Reports &amp; Analytics" style="endArrow=classic;html=1;rounded=0;dashed=1;dashPattern=8 8;strokeColor=#666666;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="360" as="sourcePoint" />
+            <mxPoint x="115" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
