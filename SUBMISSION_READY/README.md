@@ -1,12 +1,12 @@
 # Water Billing and Usage Management System for WASAC Agent
 
-**Student Name:** [YOUR NAME HERE]  
-**Student ID:** [YOUR STUDENT ID HERE]  
-**Group:** [YOUR GROUP - mon/tue/wed/thu]  
+**Student Name:** MUCYO Kevin  
+**Student ID:** 26607  
+**Group:** wed 
 **Course:** Database Development with PL/SQL (INSY 8311)  
 **Lecturer:** Eric Maniraguha  
 **Institution:** Adventist University of Central Africa (AUCA)  
-**Submission Date:** [DATE]
+**Submission Date:** 07/12/2025
 
 ---
 
@@ -204,4 +204,5 @@ Please add screenshots showing:
 ## License
 
 This project is created for academic purposes as part of the PL/SQL Capstone Project at AUCA.
+
 
